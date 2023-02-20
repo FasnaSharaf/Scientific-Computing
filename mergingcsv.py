@@ -32,7 +32,7 @@ for a1,n1 in file2:
     if flag==0:
         result.append([a1,n1])
 
-result=np.array(result)
+result=np.array(result) #Imp!!!!!!!!!!!!
 print(result)
 
 plt.hist(result[:,1], bins=4)
