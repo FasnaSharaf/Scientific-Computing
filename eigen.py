@@ -43,5 +43,12 @@ def eigenvectors(A, eigenvalues):
     return eigenvectors
     
 
-
+def rank(A):
+    # convert the matrix to row echelon form
+    R = sympy.Matrix(A).rref()[0]
+    
+    # count the number of non-zero rows
+    rank = sum([1 for row in R if any(row)])
+    
+    return rank
 
